@@ -30,16 +30,7 @@ services:
     ports:
       - '8081:8081'
 
-  minio:
-    image: minio/minio
-    container_name: minio
-    environment:
-      MINIO_ROOT_USER: root
-      MINIO_ROOT_PASSWORD: password
-    command: server /data --console-address ":9001"
-    ports:
-      - "19000:9000"
-      - "19001:9001"
+
 
   notebook:
     #image: grosinosky/bigdata_fita3_jupyter:tp5
