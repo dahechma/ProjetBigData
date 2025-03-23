@@ -1,4 +1,4 @@
-version: '3.1'
+version: "3.1"
 
 services:
   spark:
@@ -11,9 +11,9 @@ services:
       - SPARK_SSL_ENABLED=no
       - SPARK_USER=spark
     ports:
-      - '8080:8080'
-      - '7077:7077'
-      - '18888:8888'
+      - "8080:8080"
+      - "7077:7077"
+      - "18888:8888"
 
   spark-worker:
     image: docker.io/bitnami/spark:3.5.3
@@ -28,9 +28,7 @@ services:
       - SPARK_SSL_ENABLED=no
       - SPARK_USER=spark
     ports:
-      - '8081:8081'
-
-
+      - "8081:8081"
 
   notebook:
     #image: grosinosky/bigdata_fita3_jupyter:tp5
@@ -38,9 +36,9 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: jupyter
-    ports: 
-    - "8888:8888"
-    - "4040:4040"
+    ports:
+      - "8888:8888"
+      - "4040:4040"
     environment:
       JUPYTER_ENABLE_LAB: yes
     command: start-notebook.py --NotebookApp.token=''
@@ -71,4 +69,6 @@ services:
     environment:
       - KAFKA_CLUSTERS_0_NAME=kafka1
       - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka1:9092
-      - KAFKA_CLUSTERS_0_ZOOKEEPER=zookeeper1:2181 
+      - KAFKA_CLUSTERS_0_ZOOKEEPER=zookeeper1:2181
+    volumes:
+      - .:/home/jovyan/work # mounts current directory into the container
