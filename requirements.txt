@@ -1,12 +1,33 @@
-#pandas==2.2.3 # ajouter en local
+# Bibliothèques pour la gestion des données
+pandas==2.2.3
+seaborn==0.13.2
+
+# Gestion de base de données
 mysqlclient==2.2.4
 jupysql==0.10.14
-#seaborn==0.13.2 # ajouter en local
-grpcio==1.59.0
 pymongo==4.10.1
-pyspark==3.5.3
-hdfs==2.7.3
-minio==7.2.10
-docker==7.1.0
+
+# API et Kafka
+grpcio==1.59.0
 kafka-python==2.0.2; python_version < '3.12'
 kafka-python @ git+https://github.com/dpkp/kafka-python.git ; python_version >= '3.12'
+confluent-kafka==1.9.2
+
+# Spark
+pyspark==3.5.3
+
+# Stockage et HDFS
+hdfs==2.7.3
+minio==7.2.10
+
+# Docker
+docker==7.1.0
+
+# API HTTP
+requests==2.28.2
+
+# Optimisation pour Spark avec Arrow (optionnel)
+pyarrow==11.0.0
+
+# Framework web (optionnel)
+fastapi==0.95.0
