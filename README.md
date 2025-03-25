@@ -118,11 +118,9 @@ Notre architecture utilise les technologies suivantes:
 
 ## Membres du groupe
 
-- [Membre 1] - Responsable de [Tâche]
-- [Membre 2] - Responsable de [Tâche]
-- [Membre 3] - Responsable de [Tâche]
-- [Membre 4] - Responsable de [Tâche]
-
+DAHECH Mohamed Amine
+HAMDI Messaoud
+HENI Yahia
 ## Perspectives et améliorations futures
 
 - Intégration avec d'autres API de mobilité pour une vision plus complète
